@@ -7,7 +7,9 @@ export default function Mainlayout() {
 
         <Navbar>
         </Navbar>
-        <Outlet />
+        <div className="bg-gray-200 pt-3 h-max">
+            <Outlet />
+        </div>
 
     </>
 }

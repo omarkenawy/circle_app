@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@heroui/react";
-import { Navigate, NavLink, useNavigate } from 'react-router-dom';
+import { Link, Navigate, NavLink, useNavigate } from 'react-router-dom';
 import { authContext } from '../context/AuthContext';
 
 
@@ -16,7 +16,7 @@ export default function MyNavbar() {
   return <>
     <Navbar position="static">
       <NavbarBrand>
-        <p className="font-bold text-inherit">Cirlcle</p>
+        <Link to={'/'} className="font-bold text-inherit">Circle</Link>
       </NavbarBrand>
       <NavbarContent justify="end">
         {isLogged ? <NavbarItem >
