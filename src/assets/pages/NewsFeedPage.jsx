@@ -28,10 +28,10 @@ export default function NewsFeedPage() {
 
     return <>
 
-{/* callBakck={} */}
+        {/* callBakck={} */}
 
         <CreatePost callBack={getAllPosts} ></CreatePost>
 
-        {posts.length ? posts.map((post) => <PostCard key={post.id} post={post} commentLimit={1}></PostCard>) : <MySkeleton></MySkeleton>}
+        {posts.length ? posts.map((post) => <PostCard callback={getAllPosts} key={post.id} post={post} commentLimit={1}></PostCard>) : <MySkeleton></MySkeleton>}
     </>
 }

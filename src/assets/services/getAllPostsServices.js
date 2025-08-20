@@ -45,3 +45,32 @@ export async function createPostApi(formData) {
         return err.response.data.error;
     }
 }
+
+
+
+export async function deletePostApi(postId) {
+    try {
+        let { data } = await axios.delete(`https://linked-posts.routemisr.com/posts/` + postId, {
+            headers: { token: localStorage.getItem("token") }
+        })
+        return data
+    } catch (err) {
+        console.log(err.response.data.error);
+        return err.response.data.error;
+    }
+}
+
+
+export async function upadteSinglePostApi(postId, formData) {
+    try {
+        let { data } = await axios.put(`https://linked-posts.routemisr.com/posts/` + postId, formData, {
+            headers: { token: localStorage.getItem("token") }
+        }
+        );
+        console.log(data);
+        return data
+    } catch (err) {
+        console.log(err.response.data.error);
+        return err.response.data.error;
+    }
+}

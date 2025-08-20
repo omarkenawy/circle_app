@@ -9,6 +9,7 @@ import PotectedRoute from './assets/layouts/ProtectedRoute'
 import ProfilePage from './assets/pages/ProfilePage'
 import AuthPotectedRoute from './assets/layouts/AuthProtectedRoute'
 import PostDetails from './assets/pages/PostDetails'
+import ProtectedRoute from './assets/layouts/ProtectedRoute'
 
 
 
@@ -18,7 +19,8 @@ function App() {
       path: '', element: <Mainlayout />, children: [
         { index: true, element: <PotectedRoute><NewsFeedPage /></PotectedRoute> },
         { path: 'profile', element: <PotectedRoute><ProfilePage></ProfilePage> </PotectedRoute> },
-        { path: 'post-details/:id', element: <PotectedRoute><PostDetails /></PotectedRoute> }
+        { path: 'post-details/:id', element: <PotectedRoute><PostDetails /></PotectedRoute> },
+        { path: 'profile-page', element: <ProtectedRoute><ProfilePage></ProfilePage></ProtectedRoute> }
       ]
     },
     {

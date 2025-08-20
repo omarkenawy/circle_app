@@ -27,6 +27,8 @@ export default function PostDetails() {
 
     useEffect(() => {
         getSinglepost();
+        console.log('ssss');
+
     }, [])
 
     return <>
